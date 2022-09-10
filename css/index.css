@@ -1,0 +1,64 @@
+body,
+html {
+    height: 100%;
+    /* width: 100vw; */
+    margin: 0;
+}
+
+#banner {
+    text-align: center;
+    height: 90%;
+    background-attachment: fixed;
+    background-image: url('./WaterFallMain.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: black;
+}
+
+#welcome {
+    color: white;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 90%;
+    width: 100%;
+
+}
+#welcome h1{
+    margin-top: 20%;
+    font-size: 50px;
+    
+}
+
+.ml1 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  .ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  
+  .ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml1 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+  }
+  
+  .ml1 .line1 { top: 0; }
+  .ml1 .line2 { bottom: 0; }

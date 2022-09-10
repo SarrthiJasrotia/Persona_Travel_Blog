@@ -26,9 +26,10 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(methodOverride("_method"))
 // Body parser middleware: give us access to req.body
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('css'))
 
-
-
+const postController = require('./controllers/index')
+app.use('/posts', postController)
 
 
 
