@@ -9,7 +9,7 @@ const Posts = require('../models/blogPost')
 blogRouter.get('/', (req, res) => {
     Posts.find({}, (error, blogPosts) => {
         res.render('index.ejs', {
-            posts: blogPosts,
+            postsIndex: blogPosts,
         });
     });
 });
