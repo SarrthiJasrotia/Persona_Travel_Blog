@@ -30,5 +30,11 @@ blogRouter.post("/",(req,res)=>{
 //Edit
 
 //Show
-
+blogRouter.get('/:id',(req,res)=>{
+    Posts.findById(req.params.id,(error,blogPosts)=>{
+        res.render('show.ejs',{
+            postsS:blogPosts,
+        });
+    });  
+});
 module.exports = blogRouter
