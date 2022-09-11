@@ -3,32 +3,79 @@ html {
     height: 100%;
     /* width: 100vw; */
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#mainBanner{
+ height: 90%;
+ 
+ background-image: url('./WaterFallMain.jpg');
 }
 
-#banner {
+.banner {
     text-align: center;
-    height: 90%;
+    height: 70%;
     background-attachment: fixed;
-    background-image: url('./WaterFallMain.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+   
     background-color: black;
 }
-
+#banner2{
+    background-image: url('./GX010094.JPG');
+}
+#banner3{
+    background-image: url('./GX010252.jpg');
+}
 #welcome {
     color: white;
     position: absolute;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     height: 90%;
     width: 100%;
 
 }
 #welcome h1{
-    margin-top: 20%;
+    margin-top: 25%;
     font-size: 50px;
     
 }
 
+.testDiv{
+    height: 400px;
+    width: 600px;
+    background-color: beige;
+    margin: auto;
+    text-align: center;
+}
+.box{
+    height: 400px;
+    padding: 10px;
+}
+#blogList{
+    background-color: brown;
+    height: 400px;
+    border-bottom: 2px white solid;
+}
+#nav1{
+    background-color: rgba(0, 0, 0,0.5);
+    padding: 5px;
+    width: 800px;
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10PX;
+    
+}
+#nav1 a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10PX;
+}
+
+#nav1 a:hover{
+    background-color: black;
+}

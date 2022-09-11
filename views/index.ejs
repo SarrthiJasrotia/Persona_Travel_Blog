@@ -8,10 +8,12 @@
     <title>Wandering-Sarrthi</title>
 
     <link rel="stylesheet" href="/index.css">
+
+
 </head>
 
 <body>
-   
+
     <div class="banner" id="mainBanner">
         <div id="welcome">
             <nav id="nav1">
@@ -25,14 +27,35 @@
 
         </div>
 
-    <!-- Create a new Blog button -->
+    </div>
+    <div class="banner" id="banner2"></div>
+    <div class="banner" id="banner3"></div>
+    <div class="box" id="box1">
+        Personal Introduction goes here
+    </div>
 
-    <% posts.forEach(posts=> { %>
-        <p>
-            <%= posts.title %> hi
-        </p>
+    
+    <div class="box" id="box2">
+        <div>
+            <div class="testDiv">PLACEHOLDER FOR AUTOMATIC BLOGS SLIDER/CAROUSEL</div>
+
+        </div>
+    </div>
+    <a href="/posts/new">CREATE A NEW BLOG POST</a> 
+     Create a new Blog button
+
+<div>
+    <% postsIndex.forEach(postsI=> { %>
+        <div id="blogList"><a href="/posts/<%=postsI._id%>"><%=postsI.title%></a> </div>
+            
+        
         <% }) %>
+ 
+</div>
 
+
+   
 </body>
+<footer></footer>
 
 </html>
