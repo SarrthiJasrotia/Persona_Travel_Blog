@@ -16,11 +16,19 @@ blogRouter.get('/', (req, res) => {
 //New
 blogRouter.get("/new",(req,res)=>{
     res.render('new.ejs')
-})
+});
 //Delete
-
+blogRouter.delete('/:id',(req,res)=>{
+    Posts.findByIdAndDelete(req.params.id, (error,data)=>{
+        res.redirect('/blogPost')
+    });
+});
 //Update
-
+blogRouter.put('/:id/',(req,res)=>{
+    Posts.findByIdAndUpdate(req.params.id, req.body,()=>{
+        res.redirect(`/posts/${req.params.id}`)
+    });
+});
 //Create
 blogRouter.post("/",(req,res)=>{
     Posts.create(req.body, (error, createdPost)=>{
@@ -28,7 +36,13 @@ blogRouter.post("/",(req,res)=>{
     });
 });
 //Edit
-
+blogRouter.get('/:id/edit',(req,res)=>{
+    Posts.findById(req.params.id, (error,blogPosts)=>{
+        res.render('edit.ejs',{
+            postsEdit:blogPosts
+        });
+    });
+});
 //Show
 blogRouter.get('/:id',(req,res)=>{
     Posts.findById(req.params.id,(error,blogPosts)=>{

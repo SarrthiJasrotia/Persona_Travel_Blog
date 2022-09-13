@@ -3,7 +3,10 @@ const app = express()
 require('dotenv').config();
 
 const blogRouter = require("./controllers")
-app.use("/blogPost", blogRouter)
+app.use("/blogPost", blogRouter) 
+
+const user = require('./models/user')
+app.use
 
 const mongoose = require("mongoose")
 const methodOverride = require("method-override")

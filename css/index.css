@@ -11,22 +11,20 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 20px;
-    
-}
-section{
-    font-size: 2rem;
-    padding: 2rem;
-    background-color:aqua;
 
 }
+
+
+
 header {
     position: relative;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
+
 }
 
 .background {
@@ -49,28 +47,29 @@ header {
 }
 
 .title {
-    margin-left: 15%;
-    font-size: 6rem;
-    color: white;
-    transform: translateZ(2px);
-    animation-name: test;
-    animation-duration: 2s;
 
-}
-
-.caption {
     font-size: 2rem;
     color: white;
+    /* width: 50%; */
+    transform: translateZ(2px);
+    animation-name: test;
+    animation-duration: 1s;
+    /* background-color: aqua; */
+    text-align: center;
+}
+.title h1{
+    font-size: 8rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
 
 .box {
     height: 70%;
-    background-color:rgb(198, 42, 42);
+    background-color: rgb(198, 42, 42);
     color: white;
-    z-index: 1;
     
+
 }
 
 #imgBox1 {
@@ -84,54 +83,37 @@ header {
     border-bottom: 2px white solid;
 }
 
-.nav1 {
-    background-color: rgba(0, 0, 0, 1);
-    padding: 5px;
-    width: 800px;
-    margin: auto;
-    margin-top: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10PX;
 
-
-
-}
-
-.nav1 a {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    padding: 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10PX;
-}
-
-.nav1 a:hover {
-    background-color: black;
-}
 ul {
     list-style-type: none;
-    margin-top: -100px;
     padding: 0;
-    overflow: hidden;
+    margin-top: -50px;
+}
+
+li {
+    width: 9rem;
+    margin: auto;
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid white;
     
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
+}
+li:hover{
+    transform: scale(1.15);
+}
+li a {
     display: block;
-    padding: 8px;
-    background-color: #dddddd;
-  }
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
 @keyframes test {
     from {
-        transform: translateX(-50rem);
+        transform: translateY(50rem);
     }
 
     to {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
