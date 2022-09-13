@@ -1,84 +1,103 @@
-body,
-html {
-    height: 100%;
-    /* width: 100vw; */
+body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#mainBanner{
- height: 100%;
- 
- background-image: url('./WaterFallMain.jpg');
+    /* background-color:black; */
+    font-family: Verdana, sans-serif;
 }
 
-.banner {
-    text-align: center;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
+.wrapper {
     background-color: black;
+    margin-top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 20px;
+    
 }
-#banner2{
-    background-image: url('./GX010094.JPG');
- height: 80%;
+section{
+    font-size: 2rem;
+    padding: 2rem;
+    background-color:aqua;
+
 }
-#banner3{
-    background-image: url('./GX010252.jpg');
-    height: 60%;
-}
-.bannerTest{
-    background-color: black;
+header {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
     height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
 }
-#welcome {
-    color: white;
+
+.background {
+    transform: translateZ(-20px)scale(2);
+}
+
+.foreground {
+    transform: translateZ(-2.5px)scale(1.122);
+}
+
+.background,
+.foreground {
     position: absolute;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 100%;
+    height: 90%;
     width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin: 0;
 
 }
-#welcome h1{
-    margin-top: 25%;
-    font-size: 50px;
+
+.title {
+    margin-left: 15%;
+    font-size: 6rem;
+    color: white;
+    transform: translateZ(2px);
+    animation-name: test;
+    animation-duration: 2s;
+
+}
+
+.caption {
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+.box {
+    height: 70%;
+    background-color:rgb(198, 42, 42);
+    color: white;
+    z-index: 1;
     
 }
 
-.testDiv{
-    height: 400px;
-    width: 600px;
-    background-color: beige;
-    margin: auto;
-    text-align: center;
+#imgBox1 {
+    height: 100px;
+    width: 100px;
 }
-.box{
-    height: 40%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0,1);
-}
-#imgBox1{
-height: 100px;
-width: 100px;
-}
-#blogList{
+
+#blogList {
     background-color: brown;
     height: 400px;
     border-bottom: 2px white solid;
 }
-#nav1{
-    background-color: rgba(0, 0, 0,0.5);
+
+.nav1 {
+    background-color: rgba(0, 0, 0, 1);
     padding: 5px;
     width: 800px;
     margin: auto;
+    margin-top: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10PX;
-    
+
+
+
 }
-#nav1 a{
+
+.nav1 a {
     color: white;
     text-decoration: none;
     font-size: 30px;
@@ -87,6 +106,32 @@ width: 100px;
     border-bottom-right-radius: 10PX;
 }
 
-#nav1 a:hover{
+.nav1 a:hover {
     background-color: black;
+}
+ul {
+    list-style-type: none;
+    margin-top: -100px;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+@keyframes test {
+    from {
+        transform: translateX(-50rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,48 +14,64 @@
 </head>
 
 <body>
+    <div class="wrapper">
 
-    <div class="banner" id="mainBanner">
-        <div id="welcome">
-            <nav id="nav1">
-                <a href="">Home</a>
-                <a href="">Blogs</a>
-                <a href="">Gallery</a>
-            </nav>
-            <h1>WELCOME</h1>
-            <h3>Just trying to complete my bucketlist</h3>
+        <header>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+
+            <img src="/WaterFallWater.png" class="background">
+            <img src="/WaterFallMainRock.png" class="foreground">
+            <h1 class="title">Welcome</h1>
+            <!-- <h3 class="caption">Just trying to complete my bucketList</h3> -->
+
+        </header></div>
+
+
+        <!-- <section> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequatur deserunt, sequi tenetur totam vitae ea, porro, iste minima deleniti nemo consectetur recusandae officia! Cumque, et? Sit in adipisci ex.
+    
+</section> -->
+
+        <div class="box" id="box1">
+            Personal Introduction goes here
         </div>
-    </div>
-    <div class="box">
-        <img id="imgBox1" src="./DSC02962.JPG" alt="">
-    </div>
-    <div class="banner" id="banner2"></div>
-    <div class="banner" id="banner3"></div>
-    <div class="box" id="box1">
-        Personal Introduction goes here
-    </div>
+
+
+        <div class="box" id="box2">
+            <div>
+                <div class="testDiv">PLACEHOLDER FOR AUTOMATIC BLOGS SLIDER/CAROUSEL</div>
+
+            </div>
+            <a href="/posts/new">CREATE A NEW BLOG POST</a>
+        </div>
+
+
+
+        <div>
+            <% postsIndex.forEach(postsI=> { %>
+                <div id="blogList"><a href="/posts/<%=postsI._id%>">
+                        <%=postsI.title%>
+                    </a> </div>
+
+
+                <% }) %>
+
+        </div>
+
+
 
     
-    <div class="box" id="box2">
-        <div>
-            <div class="testDiv">PLACEHOLDER FOR AUTOMATIC BLOGS SLIDER/CAROUSEL</div>
-
-        </div>
-    </div>
-    <a href="/posts/new">CREATE A NEW BLOG POST</a> 
-     Create a new Blog button
-
-<div>
-    <% postsIndex.forEach(postsI=> { %>
-        <div id="blogList"><a href="/posts/<%=postsI._id%>"><%=postsI.title%></a> </div>
-            
-        
-        <% }) %>
- 
-</div>
 
 
-   
+
+
+
+
+
 </body>
 <footer></footer>
 

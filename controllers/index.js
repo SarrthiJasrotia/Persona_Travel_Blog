@@ -25,15 +25,15 @@ blogRouter.get("/new",(req,res)=>{
 blogRouter.post("/",(req,res)=>{
     Posts.create(req.body, (error, createdPost)=>{
         res.redirect('/blogPost')
-    })
-})
+    });
+});
 //Edit
 
 //Show
 blogRouter.get('/:id',(req,res)=>{
     Posts.findById(req.params.id,(error,blogPosts)=>{
         res.render('show.ejs',{
-            postsS:blogPosts,
+            postsShow:blogPosts,
         });
     });  
 });
