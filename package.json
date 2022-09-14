@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
@@ -13,7 +14,6 @@
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SarrthiJasrotia/Persona_Travel_Blog.git"

@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
+
 require('dotenv').config();
 
-const blogRouter = require("./controllers")
-app.use("/blogPost", blogRouter) 
+// const blogRouter = require("./controllers")
+// app.use("/blogPost", blogRouter) 
 
 
 
@@ -27,15 +28,16 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // Middleware
 app.use(methodOverride("_method"))
 // Body parser middleware: give us access to req.body
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static('css'))
-app
-
-const postController = require('./controllers/index')
-app.use('/', postController)
 
 
+const postController = require('./controllers/index.js');
+app.use('/', postController);
 
+
+// const loginController = require('./controllers/login.js');
+// app.use('/',loginController)
 
 
 
