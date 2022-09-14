@@ -5,8 +5,7 @@ require('dotenv').config();
 const blogRouter = require("./controllers")
 app.use("/blogPost", blogRouter) 
 
-const user = require('./models/user')
-app.use
+
 
 const mongoose = require("mongoose")
 const methodOverride = require("method-override")
@@ -33,7 +32,7 @@ app.use(express.static('css'))
 app
 
 const postController = require('./controllers/index')
-app.use('/posts', postController)
+app.use('/', postController)
 
 
 

@@ -19,18 +19,17 @@
         <header>
 
 
-            <img src="/WaterFallWater.png" class="background">
-            <img src="/WaterFallMainRock.png" class="foreground">
+            <img src="/images/WaterFallWater.png" class="background">
+            <img src="/images/WaterFallMainRock.png" class="foreground">
             <div class="title">
                 <h1>Welcome</h1>
                 <ul class="nav1">
                     <li><a href="#home">BLOGS</a></li>
-                    
                 </ul>
             </div>
 
             <!-- <h3 class="caption">Just trying to complete my bucketList</h3> -->
-
+            <a href="/login" id="login">Login</a>
         </header>
 
         <!-- <section> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequatur deserunt, sequi tenetur totam vitae ea, porro, iste minima deleniti nemo consectetur recusandae officia! Cumque, et? Sit in adipisci ex.
@@ -47,14 +46,14 @@
                 <div class="testDiv">PLACEHOLDER FOR AUTOMATIC BLOGS SLIDER/CAROUSEL</div>
 
             </div>
-            <a href="/posts/new">CREATE A NEW BLOG POST</a>
+            <a href="/new">CREATE A NEW BLOG POST</a>
         </div>
 
 
 
         <div>
             <% postsIndex.forEach(postsI=> { %>
-                <div id="blogList"><a href="/posts/<%=postsI._id%>">
+                <div id="blogList"><a href="/<%=postsI._id%>">
                         <%=postsI.title%>
                     </a> </div>
 

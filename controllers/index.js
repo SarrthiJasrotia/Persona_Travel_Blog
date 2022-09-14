@@ -20,21 +20,21 @@ blogRouter.get("/new",(req,res)=>{
 //Delete
 blogRouter.delete('/:id',(req,res)=>{
     Posts.findByIdAndDelete(req.params.id, (error,data)=>{
-        res.redirect('/blogPost')
+        res.redirect('/')
     });
 });
 
 //Update
 blogRouter.put('/:id/',(req,res)=>{
     Posts.findByIdAndUpdate(req.params.id, req.body,()=>{
-        res.redirect(`/posts/${req.params.id}`)
+        res.redirect(`/${req.params.id}`)
     });
 });
 
 //Create
 blogRouter.post("/",(req,res)=>{
     Posts.create(req.body, (error, createdPost)=>{
-        res.redirect('/blogPost')
+        res.redirect('/')
     });
 });
 

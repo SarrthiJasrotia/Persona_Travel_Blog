@@ -7,7 +7,7 @@
     <title>EDIT</title>
 </head>
 <body>
-    <form action="/posts/<%=postsEdit._id%>?_method=PUT" method="POST">
+    <form action="/<%=postsEdit._id%>?_method=PUT" method="POST">
         Title: <input type="text" name="title" value="<%=postsEdit.title%>"/>   <br />
         Image: <input type="text" name="title_img" id="">
         <input type="submit" name="" value="Post Blog">
