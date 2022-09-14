@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wandering-Sarrthi</title>
+
+    <link rel="stylesheet" href="/index.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+
+
+            <img src="/WaterFallWater.png" class="background">
+            <img src="/WaterFallMainRock.png" class="foreground">
+            <div class="title">
+                <h1>Welcome</h1>
+                <ul class="nav1">
+                    <li><a href="#home">BLOGS</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- <h3 class="caption">Just trying to complete my bucketList</h3> -->
+
+        </header>
+
+        <!-- <section> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequatur deserunt, sequi tenetur totam vitae ea, porro, iste minima deleniti nemo consectetur recusandae officia! Cumque, et? Sit in adipisci ex.
+    
+</section> -->
+
+        <div class="box" id="box1">
+            Personal Introduction goes here
+        </div>
+
+
+        <div class="box" id="box2">
+            <div>
+                <div class="testDiv">PLACEHOLDER FOR AUTOMATIC BLOGS SLIDER/CAROUSEL</div>
+
+            </div>
+            <a href="/posts/new">CREATE A NEW BLOG POST</a>
+        </div>
+
+
+
+        <div>
+            <% postsIndex.forEach(postsI=> { %>
+                <div id="blogList"><a href="/posts/<%=postsI._id%>">
+                        <%=postsI.title%>
+                    </a> </div>
+
+
+                <% }) %>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+<footer></footer>
+
+</html>
