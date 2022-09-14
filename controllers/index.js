@@ -6,6 +6,7 @@ const Posts = require('../models/blogPost')
 const User = require('../models/user.js')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const authenticateUser = require('../middleware/authenticate')
 ///////////MAIN PAGE ROUTES/////////////
 //Index
 blogRouter.get('/', (req, res) => {
@@ -102,7 +103,7 @@ const login = (req, res, next) => {
                         })
                     };
                     if (result) {
-                        let token = jwt.sign({ name: user.name }, 'veryHardPassword', { expiresIn: "1h" })
+                        let token = jwt.sign({ name: user.name }, 'GLhou%)h', { expiresIn: "1h" })
                         res.json({
                             message: "Login Successfull",
                             token
@@ -140,6 +141,25 @@ const login = (req, res, next) => {
     })
 }
 blogRouter.post('/login', login)
+ //Edit
+ blogRouter.get('/:id/edit', (req, res) => {
+    Posts.findById(req.params.id, (error, blogPosts) => {
+        res.render('home/edit.ejs', {
+            postsEdit: blogPosts
+        });
+    });
+});
+
+//Show
+blogRouter.get('/:id', (req, res) => {
+    Posts.findById(req.params.id, (error, blogPosts) => {
+        res.render('home/show.ejs', {
+            postsShow: blogPosts,
+        })
+    })
+})
+
+
 
 
 
