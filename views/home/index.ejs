@@ -51,11 +51,11 @@
 
 
 
-        <div>
+        <div style="background-image:url(<%=postsIndex.title_img%>) ;">
             <% postsIndex.forEach(postsI=> { %>
                 <div id="blogList"><a href="/<%=postsI._id%>">
-                        <%=postsI.title%>
-                    </a> </div>
+                        <h1><%=postsI.title%></h1>
+                    </div>
 
 
                 <% }) %>

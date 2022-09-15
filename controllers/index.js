@@ -8,8 +8,9 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const authenticateUser = require('../middleware/authenticate')
 ///////////MAIN PAGE ROUTES/////////////
+
 //Index
-blogRouter.get('/', (req, res) => {
+blogRouter.get('/',(req, res) => {
     Posts.find({}, (error, blogPosts) => {
         res.render('home/index.ejs', {
             postsIndex: blogPosts,
@@ -30,10 +31,12 @@ blogRouter.get('/login', (req, res) => {
 blogRouter.get('/register', (req, res) => {
     res.render('login/register.ejs')
 })
+
 //New
 blogRouter.get("/new", (req, res) => {
     res.render('home/new.ejs')
 });
+
 //Delete
 blogRouter.delete('/:id', (req, res) => {
     Posts.findByIdAndDelete(req.params.id, (error, data) => {
@@ -56,6 +59,7 @@ blogRouter.post("/", (req, res) => {
 });
 
 //////////////AUTH CODE FOR REGISTERING////////////
+
 const register = (req, res, next) => {
     bcrypt.hash(req.body.password, 10, (err, hashedPass) => {
         if (err) {
@@ -71,9 +75,9 @@ const register = (req, res, next) => {
         })
         user.save()
             .then(user => {
-                res.json({
-                    message: 'New user added'
-                })
+                
+                    res.redirect('/login')
+                
             })
             .catch(error => {
                 res.json({
@@ -89,11 +93,12 @@ blogRouter.post('/register', register)
 
 
 //////////////////CODE FOR LOGIN////////////
+
 const login = (req, res, next) => {
     let username = req.body.username
     let password = req.body.password
 
-    User.findOne({ email: username })
+    User.findOne({email: username })
         .then(user => {
             if (user){
                 bcrypt.compare(password, user.password, (err, result)=>{
@@ -104,10 +109,15 @@ const login = (req, res, next) => {
                     };
                     if (result) {
                         let token = jwt.sign({ name: user.name }, 'GLhou%)h', { expiresIn: "1h" })
-                        res.json({
-                            message: "Login Successfull",
+                    //    console.log("Login successfull", token)
+                        console.log(
+                            "Login Successfull",
                             token
-                        });
+                
+                        ) 
+                        res.setHeader({'Authorization':`Bearer ${token}`})
+                        res.redirect('/new');
+                        // res.redirect('/new')
                     } else {
                         res.json({
                             message: 'Wrong Password'
@@ -121,7 +131,7 @@ const login = (req, res, next) => {
             }
         });
 
-    
+ 
     //Edit
     blogRouter.get('/:id/edit', (req, res) => {
         Posts.findById(req.params.id, (error, blogPosts) => {
@@ -140,7 +150,7 @@ const login = (req, res, next) => {
         })
     })
 }
-blogRouter.post('/login', login)
+blogRouter.post('/login', login)   
  //Edit
  blogRouter.get('/:id/edit', (req, res) => {
     Posts.findById(req.params.id, (error, blogPosts) => {

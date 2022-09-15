@@ -1,8 +1,63 @@
-
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
 .wrapper{
     margin-left: 10%;
     margin-right: 10%;
+    height: 100%;
+    text-align: center;
+    
 }
-#test1{
-    height: 500px;
+#title-img{
+   background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    border-radius: 10px;
+}
+#title-img h1{
+    color:rgb(255, 255, 255);
+    mix-blend-mode: overlay;
+    font-size: 10rem;
+   font-family: Verdana, sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#blog-body{
+    margin: 5%;
+    margin-top: 0;
+    
+}
+.img-box{
+    line-height:0;
+   -webkit-column-count:3; /* split it into 5 columns */
+   -webkit-column-gap:5px; /* give it a 5px gap between columns */
+   -moz-column-count:3;
+   -moz-column-gap:5px;
+   column-count:3;
+   column-gap:5px;
+
+}
+.img-box img{
+    
+width: 100% ;
+   height: auto;
+   margin-bottom:5px; /* to match column gap */
+}
+
+.blogText{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.blogCaption{
+    color: brown;
+}
+#na1{
+    background-color: red;
 }
