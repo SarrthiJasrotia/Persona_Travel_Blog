@@ -3,6 +3,58 @@ body {
     /* background-color:black; */
     font-family: Verdana, sans-serif;
 }
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Handlee);
+
+
+#coverPaper{
+    background-color: rgb(0, 0, 0);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+}
+#coverPaper:hover{
+    border: 5px solid #fbde77;
+}
+.paper {
+    position: relative;
+    width: 60%;
+    /* max-width: 800px; */
+    min-width: 400px;
+    height: 690px;
+    margin: 0 auto;
+    background: #fbde77;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    overflow: hidden;
+}
+.paper:hover{
+    transform: scale(1.3);
+}
+.paper:before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 60px;
+    background: radial-gradient(#000000 6px, transparent 7px) repeat-y;
+    background-size: 30px 30px;
+    border-right: 3px solid #ff0033;
+    box-sizing: border-box;
+}
+
+.paper-content {
+    
+    color: rgb(0, 17, 255);
+    position: absolute;
+    top: 30px; right: 10px; bottom: 30px; left: 70px;
+    font-family: 'Handlee', cursive;
+    background-size: 30px 30px;
+    line-height: 34px;
+    font-weight: bolder
+}
+
+
 
 .wrapper {
     background-color: black;
@@ -46,7 +98,7 @@ header {
     object-fit: cover;
     z-index: -1;
     margin: 0;
-
+border-radius: 20px;
 }
 
 .title {
@@ -69,7 +121,7 @@ header {
 
 .box {
     height: 70%;
-    background-color: rgb(198, 42, 42);
+    background-color: rgb(38, 33, 33);
     color: white;
     
 
