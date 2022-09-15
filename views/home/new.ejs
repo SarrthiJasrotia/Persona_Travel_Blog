@@ -5,19 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/new.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Post a new Blog</h1>
+    
+    <div id="input">
+        <form action="/" method="POST">
 
-    <form action="/" method="POST">
-        Title: <input type="text" name="title" /><br />
-        Image: <input type="text" name="title_img" id="">
-        <input type="submit" name="" value="Post Blog">
-    </form>
+            <div class="wrapper">
+
+                <!-- nav bar -->
+                <nav id="nav1">
+                    <a href="/">Home</a>
+
+                    <a href="">Gallery</a>
+                </nav>
+<h1>Post a new Blog</h1>
+                <!-- Header -->
+                <div id="title-img">
+
+
+                     <input type="text" name="title" placeholder="Title" required/><br />
+
+                     <input type="text" name="title_img" id="" placeholder="Title-Image"required>
+                </div>
+                <!-- Blog Body -->
+               
+                <div id="blog-body">
+                    <h1 class="blogCaption"> Date-traveled: <input type="date" name="date" id=""></h1>
+                    <div class="blogText">
+
+                        <h1>  <input type="text" name="Paragraph1_title" placeholder="Paragraph-1 Title:" required></h1>
+                         <input type="text" name="Paragraph1" placeholder="Paragraph 1:"required>
+                    </div>
+                    <div class="blogText">
+                        <h1> <input type="text" name="Paragraph2_title" placeholder="Paragraph-2 Title: "></h1>
+                        <input type="text" name="Paragraph2" placeholder=" Paragraph 2:">
+                    </div>
+                    <div class="blogText">
+                        <h1><input type="text" name="Paragraph3_title" placeholder="Paragraph-3 Title: "></h1>
+                         <input type="text" name="Paragraph3" placeholder="Paragraph 3:">
+                    </div>
+                </div>
+
+                <div class="img-box">
+
+                </div>
+                <input id="submit" type="submit" name="" value="Post Blog">
+            </div>
+
+
 
     
+
+</body>
+</form>
+</div>
+
 </body>
 
 </html>

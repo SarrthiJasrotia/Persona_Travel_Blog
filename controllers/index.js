@@ -38,14 +38,14 @@ blogRouter.get("/new", (req, res) => {
 });
 
 //Delete
-blogRouter.delete('/:id', (req, res) => {
+blogRouter.delete('/:id',authenticateUser, (req, res) => {
     Posts.findByIdAndDelete(req.params.id, (error, data) => {
         res.redirect('/')
     });
 });
 
 //Update
-blogRouter.put('/:id/', (req, res) => {
+blogRouter.put('/:id/',authenticateUser, (req, res) => {
     Posts.findByIdAndUpdate(req.params.id, req.body, () => {
         res.redirect(`/${req.params.id}`)
     });
