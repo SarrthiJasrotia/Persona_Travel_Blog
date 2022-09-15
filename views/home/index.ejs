@@ -35,11 +35,20 @@
         <!-- <section> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequatur deserunt, sequi tenetur totam vitae ea, porro, iste minima deleniti nemo consectetur recusandae officia! Cumque, et? Sit in adipisci ex.
     
 </section> -->
-
-        <div class="box" id="box1">
-            Personal Introduction goes here
+    <div id="coverPaper">
+        <div class="paper">
+            <div class="paper-content">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem ut quaerat a explicabo commodi
+                    inventore. Officiis hic sed accusantium ipsa aperiam molestias placeat? Possimus beatae maiores
+                    saepe perspiciatis ullam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, facere
+                    voluptatum. Earum culpa ut neque distinctio optio porro tempore excepturi, accusamus explicabo
+                    reiciendis quibusdam dolorum, eos a praesentium debitis in?Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Voluptatem repellat neque doloribus aut nulla minus totam officiis voluptas.
+                    Beatae ea praesentium enim excepturi dolorem ipsa incidunt reprehenderit at? Illum, ut.
+                </h1>
+            </div>
         </div>
-
+</div>
 
         <div class="box" id="box2">
             <div>
@@ -54,8 +63,10 @@
         <div style="background-image:url(<%=postsIndex.title_img%>) ;">
             <% postsIndex.forEach(postsI=> { %>
                 <div id="blogList"><a href="/<%=postsI._id%>">
-                        <h1><%=postsI.title%></h1>
-                    </div>
+                        <h1>
+                            <%=postsI.title%>
+                        </h1>
+                </div>
 
 
                 <% }) %>

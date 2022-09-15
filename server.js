@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
-
+const session = require('express-session')
+const MongoDBSession = require('connect-mongodb-session')(session);
 require('dotenv').config();
-
-// const blogRouter = require("./controllers")
-// app.use("/blogPost", blogRouter) 
 
 
 
@@ -15,8 +13,23 @@ const methodOverride = require("method-override")
 //Database config
 mongoose.connect(process.env.DATABASE_URL, {
 	useNewUrlParser: true,
-	useUnifiedTopology: true
+	useUnifiedTopology: true,
+	useUnifiedTopology: true,
 });
+
+const store= new MongoDBSession({
+	uri:process.env.DATABASE_URL,
+	collection:'sessions',
+})
+
+app.use(session({
+	secret: "veryHardPass",
+	resave: false,
+	saveUninitialized: false,
+	store:store,
+}))
+
+
 
 // Database Connection Error/Success
 // Define callback functions for various events
@@ -38,13 +51,9 @@ const postController = require('./controllers/index.js');
 app.use('/', postController);
 
 
-// const loginController = require('./controllers/login.js');
-// app.use('/',loginController)
-
-
 
 
 //listening
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log("its working")
 })
