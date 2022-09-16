@@ -121,16 +121,55 @@ header {
 }
 
 
-
-.box {
-    height: 70%;
-    background-color: rgb(38, 33, 33);
-    color: white;
-    
-
+#activity{
+    display: flex;
+    flex-direction:column;
+    background-color: aliceblue;
+    height: 100%;
+    text-align: center;
+}
+#toBlogs{
+    color: #ff0033;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 1000;
 }
 
+.act{
+    
+    height: 300px;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    margin-top: 20px;
+    font-size: 20px;
+    grid-template-columns: 50% 50%;
+    border-radius: 20px;
+    text-align: left;
+}
+.act div{
+    
+    border-radius: 20px;
+}
 
+.act img{
+    max-width:50%;
+max-height:50%;
+}
+
+.act:hover{
+    transform: scale(1.1);
+}
+#act1{
+    align-self: flex-start;
+    text-align: left;
+    
+}
+#act2{
+    align-self: flex-end;
+    text-align: right;
+    
+}
 
 #blogList {
     display: flex;
@@ -156,8 +195,8 @@ header {
     font-size: 5rem;
     margin: auto;
     text-decoration: none;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #fbde77;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 #blogContainer{
 height: 100%;
