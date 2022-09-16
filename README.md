@@ -24,6 +24,7 @@ I like to make projects that I can actaully use rather than just making making p
 * HTML
 * EJS
 * Auth through express sessions
-
+* Mongoose
+* MongoDB
 
 
