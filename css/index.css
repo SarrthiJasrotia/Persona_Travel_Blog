@@ -2,6 +2,7 @@ body {
     margin: 0;
     /* background-color:black; */
     font-family: Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
@@ -12,6 +13,7 @@ body {
     padding-top: 2%;
     padding-bottom: 2%;
     position: relative;
+    
 }
 #coverPaper:hover{
     border: 5px solid #fbde77;
@@ -33,11 +35,11 @@ body {
     transform: scale(1.3);
 }
 .paper:before {
-    content: '';
+    content: ' ';
     position: absolute;
     top: 0; bottom: 0; left: 0;
     width: 60px;
-    background: radial-gradient(#000000 6px, transparent 7px) repeat-y;
+    background: radial-gradient(#000000 10px, transparent 7px) repeat-y;
     background-size: 30px 30px;
     border-right: 3px solid #ff0033;
     box-sizing: border-box;
@@ -76,7 +78,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 90%;
     transform-style: preserve-3d;
     z-index: -1;
 
@@ -93,12 +95,13 @@ header {
 .background,
 .foreground {
     position: absolute;
-    height: 90%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: -1;
     margin: 0;
-border-radius: 20px;
+    margin-top: -200px;
+
 }
 
 .title {
@@ -127,17 +130,38 @@ border-radius: 20px;
 
 }
 
-#imgBox1 {
-    height: 100px;
-    width: 100px;
-}
+
 
 #blogList {
-    background-color: brown;
-    height: 400px;
-    border-bottom: 2px white solid;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50%;
+    margin: 20px;
+    border-radius: 20px;
+    border:  #fbde77 4px solid;
+    text-align: center;
+   
 }
 
+#blogList a{ 
+    height: 100%;
+    width:100%;
+    background-color: rgba(0, 0, 0,0.3);
+   border-radius: 20px;
+    font-size: 5rem;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#blogContainer{
+height: 100%;
+}
 
 ul {
     list-style-type: none;

@@ -33,10 +33,7 @@ blogRouter.get('/login', (req, res) => {
         res.render('login/login.ejs',);
     });
 
-blogRouter.get('/ses', (req, res) => {
-    req.session.isAuth = true;
-    res.send('workiing')
-})
+
 //register
 blogRouter.get('/register', (req, res) => {
     res.render('login/register.ejs')
@@ -48,21 +45,21 @@ blogRouter.get("/new",isAuth, (req, res) => {
 });
 
 //Delete
-blogRouter.delete('/:id', (req, res) => {
+blogRouter.delete('/:id',isAuth, (req, res) => {
     Posts.findByIdAndDelete(req.params.id, (error, data) => {
         res.redirect('/')
     });
 });
 
 //Update
-blogRouter.put('/:id/', (req, res) => {
+blogRouter.put('/:id/',isAuth, (req, res) => {
     Posts.findByIdAndUpdate(req.params.id, req.body, () => {
         res.redirect(`/${req.params.id}`)
     });
 });
 
 //Create
-blogRouter.post("/", (req, res) => {
+blogRouter.post("/",isAuth, (req, res) => {
     Posts.create(req.body, (error, createdPost) => {
         res.redirect('/')
     });
