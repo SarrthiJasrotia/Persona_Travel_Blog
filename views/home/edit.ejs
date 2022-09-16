@@ -5,13 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDIT</title>
+    <link rel="stylesheet" href="/edit.css">
 </head>
 <body>
+    <div id="input">
     <form action="/<%=postsEdit._id%>?_method=PUT" method="POST">
-        Title: <input type="text" name="title" value="<%=postsEdit.title%>"/>   <br />
-        Image: <input type="text" name="title_img" id="">
-        <input type="submit" name="" value="Post Blog">
-    </form>
+        <div class="wrapper">
 
+            <!-- nav bar -->
+            <nav id="nav1">
+                <a href="/">Home</a>
+
+                <a href="">Gallery</a>
+            </nav>
+            <h1>Edit Blog</h1>
+            <!-- Header -->
+            <div id="title-img">
+
+
+                <input type="text" name="title" placeholder="Title" value="<%=postsEdit.title%>" /><br />
+
+                <input type="text" name="title_img" id="" placeholder="Title-Image" value="<%=postsEdit.title_img%>">
+            </div>
+            <!-- Blog Body -->
+
+            <div id="blog-body">
+                <h1 class="blogCaption"> Date-traveled: <input type="text" name="Date" value="<%=postsEdit.Date%>"></h1>
+                <div class="blogText">
+
+                    <h1> <input type="text" name="Paragraph1_title" value="<%=postsEdit.Paragraph1_title%>" ></h1>
+                    <input type="text" name="Paragraph1" value="<%=postsEdit.Paragraph1%>" >
+                </div>
+                <div class="blogText">
+                    <h1> <input type="text" name="Paragraph2_title" value="<%=postsEdit.Paragraph2_title%>"></h1>
+                    <input type="text" name="Paragraph2"  value="<%=postsEdit.Paragraph2%>" >
+                </div>
+                <div class="blogText">
+                    <h1><input type="text" name="Paragraph3_title" value="<%=postsEdit.Paragraph3_title%>"></h1>
+                    <input type="text" name="Paragraph3"  value="<%=postsEdit.Paragraph3%>" >
+                </div> 
+                <div class="img-box">
+
+                
+                <input type="text" name="galleryImg1" value="<%=postsEdit.galleryImg1%>"  placeholder="Image 1" >
+                <input type="text" name="galleryImg2" value="<%=postsEdit.galleryImg2%>"  placeholder="Image 2" >
+                <input type="text" name="galleryImg3"  value="<%=postsEdit.galleryImg3%>"  placeholder="Image 3" >
+                <input type="text" name="galleryImg4" value="<%=postsEdit.galleryImg4%>"  placeholder="Image 4" >
+                <input type="text" name="galleryImg5" value="<%=postsEdit.galleryImg5%>"  placeholder="Image 5">
+                <input type="text" name="galleryImg6" value="<%=postsEdit.galleryImg6%>"  placeholder="Image 6" >
+                <input type="text" name="galleryImg7"value="<%=postsEdit.galleryImg7%>"  placeholder="Image 7" >
+                <input type="text" name="galleryImg8"value="<%=postsEdit.galleryImg8%>"  placeholder="Image 8">
+                <input type="text" name="galleryImg9"value="<%=postsEdit.galleryImg9%>"  placeholder="Image 9" >
+                <input type="text" name="galleryImg10"value="<%=postsEdit.galleryImg10%>"  placeholder="Image 10">
+            </div>
+            </div>
+          
+           
+
+            <input id="submit" type="submit" name="" value="Submit changes">
+        </div>
+
+    </form>
+</div>
 </body>
 </html>

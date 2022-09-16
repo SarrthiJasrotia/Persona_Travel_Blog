@@ -69,10 +69,7 @@ body {
 }
 
 
-#login{
-    align-self: flex-start;
-    
-}
+
 header {
     position: relative;
     display: flex;
@@ -127,9 +124,12 @@ header {
     background-color: aliceblue;
     height: 100%;
     text-align: center;
+    font-size: 2rem;
 }
 #toBlogs{
-    color: #ff0033;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: #fbde77;
     text-align: center;
     font-size: 6rem;
     font-weight: 1000;
@@ -199,7 +199,9 @@ max-height:50%;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 #blogContainer{
-height: 100%;
+height: 100vh;
+margin-bottom: 50%;
+position: relative;
 }
 
 ul {
@@ -226,6 +228,25 @@ li a {
     color: white;
 }
 
+#tools{
+    background-color: #f41212;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 10%;
+}
+.toolBtn{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color: white;
+    background-color: rgb(210, 164, 65);
+    border-radius: 5px;
+    border: 2px solid white;
+}
 @keyframes test {
     from {
         transform: translateY(50rem);

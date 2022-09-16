@@ -35,7 +35,7 @@ blogRouter.get('/login', (req, res) => {
 
 
 //register
-blogRouter.get('/register', (req, res) => {
+blogRouter.get('/register',isAuth, (req, res) => {
     res.render('login/register.ejs')
 })
 
@@ -182,7 +182,7 @@ blogRouter.post('/logout', (req,res)=>{
 })
 
 //edit
-blogRouter.get('/:id/edit', (req, res) => {
+blogRouter.get('/:id/edit',isAuth, (req, res) => {
     Posts.findById(req.params.id, (error, blogPosts) => {
         res.render('home/edit.ejs', {
             postsEdit: blogPosts

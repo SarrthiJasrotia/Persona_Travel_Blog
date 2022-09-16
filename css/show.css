@@ -42,13 +42,13 @@ body {
 
 .img-box {
     line-height: 0;
-    -webkit-column-count: 3;
+    -webkit-column-count: 4;
     /* split it into 5 columns */
     -webkit-column-gap: 5px;
     /* give it a 5px gap between columns */
-    -moz-column-count: 3;
+    -moz-column-count: 4;
     -moz-column-gap: 5px;
-    column-count: 3;
+    column-count: 4;
     column-gap: 5px;
 
 }
@@ -66,12 +66,36 @@ body {
     font-size: 2rem;
     margin-bottom: 5%;
     text-align: left;
+    
+    word-wrap: break-word;
 }
 
 .blogCaption {
     color: brown;
 }
 
-#na1 {
+#na1 a{
     background-color: red;
+    font-size: 2rem;
+}
+#tools{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 10%;
+}
+.toolBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 5rem;
+    color: white;
+    background-color: rgb(177, 13, 13);
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.class{
+    color: white;
 }
