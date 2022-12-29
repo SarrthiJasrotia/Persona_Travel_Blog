@@ -5,7 +5,7 @@ const blogRouter = express.Router()
 const Posts = require('../models/blogPost')
 const User = require('../models/user.js')
 const bcrypt = require('bcrypt');
-
+//testing
 // const jwt = require('jsonwebtoken')
 // const authenticateUser = require('../middleware/authenticate')
 
